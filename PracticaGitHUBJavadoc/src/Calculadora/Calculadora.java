@@ -4,26 +4,51 @@ public class Calculadora {
 
 	double op1;
 	double op2;
-	
+	/**
+	 * Asignamos los numeros.
+	 * @param op1 
+	 * @param op2 
+	 */
 	
 	public Calculadora(double op1, double op2) {
 		this.op1 = op1;
 		this.op2 = op2;
+		/**
+		 * montamos el numero
+		 */
 	}
 	
 	public double suma() {
+		/**
+		 * vamos a sumar operando1 + el operando2 
+		 * @return op1 + op2: muestra la suma
+		 */
 		return op1+op2;
 	}
 	
+	
 	public double resta() {
+		/**
+		 * vamos a restar operando1 - operando2
+		 * @return op1-op2: muestra resta
+		 */
 		return op1-op2;
+		
 	}
 	
 	public double division() {
+		/**
+		 * vamos a dividir el operando1 del operando2
+		 * @return op1/op2: muestra division
+		 */
 		if(op2==0) {
 			throw new IllegalArgumentException("El divisor es 0");
+			/**
+			 * @trhow se produce un error si el divide por 0
+			 */
 		}
 		return op1/op2;
+		
 	}
 	
 	public double potencia() {
@@ -34,11 +59,18 @@ public class Calculadora {
 			return -Math.pow(op1, op2);
 		}
 		return Math.pow(op1, op2);
+		/**
+		 *lo elevamos
+		 *@return Math.pow(op1, op2): muestra la potencia
+		 */
 	}
 
 	@Override
 	public String toString() {
 		return "Calculadora de Sheila[operando1= " + op1 + ", operando2= " + op2 + "]";
+		/**
+		 * @return muestra el autor y los numeros que estan operando
+		 */
 	}
 	
 	
